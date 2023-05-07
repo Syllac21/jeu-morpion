@@ -52,6 +52,7 @@ function verifGagne(){
     if(tourGagnant){
         statut.innerHTML=gagne()
         jeuActif=false 
+        document.getElementById('victoire').style.visibility = 'visible';
         return
     }
 
@@ -69,5 +70,6 @@ function recommencer(){
     jeuActif=true
     etatJeu= ["" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,""]
     statut.innerHTML=tourJoueur()
+    document.getElementById('victoire').style.visibility = 'hidden';
     document.querySelectorAll(".case").forEach(cell=>cell.innerHTML="")
 }
